@@ -34,12 +34,12 @@ const Home = ({ posts }) => {
 };
 
 //SSG
-export async function getStaticProps() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await response.json();
+// export async function getStaticProps() {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const posts = await response.json();
 
-  return { props: { posts: posts.slice(0, 15) } };
-}
+//   return { props: { posts: posts.slice(0, 15) } };
+// }
 
 //SSR
 // export async function getServerSideProps() {
@@ -50,16 +50,16 @@ export async function getStaticProps() {
 // }
 
 // ISR
-// export async function getStaticProps() {
-//   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-//   const posts = await response.json();
+export async function getStaticProps() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await response.json();
 
-//   return {
-//     props: {
-//       posts: posts.slice(0, 5),
-//       revalidate: 60,
-//     },
-//   };
-// }
+  return {
+    props: {
+      posts: posts.slice(0, 5),
+      revalidate: 60,
+    },
+  };
+}
 
 export default Home;
