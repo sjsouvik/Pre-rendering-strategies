@@ -38,7 +38,7 @@ export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await response.json();
 
-  return { props: { posts: posts.slice(0, 5) } };
+  return { props: { posts: posts.slice(0, 15) } };
 }
 
 //SSR
