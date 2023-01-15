@@ -22,6 +22,7 @@ const Home = ({ posts }) => {
               width: "250px",
               padding: "0.5rem",
               margin: "0.5rem",
+              borderRadius: "0.5rem",
               cursor: "pointer",
             }}
           >
@@ -56,9 +57,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts.slice(0, 15),
-      revalidate: 60,
+      posts: posts.slice(0, 5),
     },
+    revalidate: 10,
   };
 }
 

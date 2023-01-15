@@ -47,9 +47,9 @@ export async function getStaticProps({ params }) {
 //           width: "250px",
 //           padding: "0.5rem",
 //           margin: "0.5rem",
+//           borderRadius: "0.5rem",
 //           cursor: "pointer",
 //         }}
-//         key={post.id}
 //       >
 //         {post.body}
 //       </div>
@@ -81,9 +81,9 @@ const Post = ({ post }) => {
           width: "250px",
           padding: "0.5rem",
           margin: "0.5rem",
+          borderRadius: "0.5rem",
           cursor: "pointer",
         }}
-        key={post.id}
       >
         {post.body}
       </div>
