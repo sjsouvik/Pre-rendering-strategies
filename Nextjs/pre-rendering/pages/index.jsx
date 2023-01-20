@@ -41,7 +41,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts: posts.slice(0, 5),
+      posts,
     },
     revalidate: 10,
   };

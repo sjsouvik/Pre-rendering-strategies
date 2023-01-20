@@ -5,7 +5,9 @@ export async function getStaticPaths() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await response.json();
 
-  const paths = posts.map((post) => ({ params: { id: `${post.id}` } }));
+  const paths = posts
+    // .slice(0, 15)
+    .map((post) => ({ params: { id: `${post.id}` } }));
 
   return { paths, fallback: "blocking" };
 }
